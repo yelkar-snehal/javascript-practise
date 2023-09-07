@@ -21,4 +21,18 @@ const debounce = (fn, delay) => {
   };
 };
 
+const throttle = (fn, delay) => {
+  let shouldCall = true;
+  return (...args) => {
+    const ctx = this;
+    if (shouldCall) {
+      console.log(this.value + " in throttle");
+      fn.apply(ctx, args);
+      shouldCall = false;
+      setTimeout(() => (shouldCall = true), delay);
+    }
+  };
+};
+
 const debouncedKeyDown = debounce(onKeyDown, 10000);
+const throttledKeyDown = throttle(onKeyDown, 2000);

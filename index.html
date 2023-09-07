@@ -4,7 +4,8 @@
 
 <body>
     <p>hello, world</p>
-    <input onkeyUp="debouncedKeyDown(this.value)" />
+    <!-- <input onkeyUp="debouncedKeyDown(this.value)" /> -->
+    <input onkeyUp="throttledKeyDown(this.value)" />
     <!-- <input onkeyUp="onKeyDown(this.value)" /> -->
 </body>
 
