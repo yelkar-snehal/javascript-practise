@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html>
-<script type="text/javascript" src="./script.js"></script>
+
+<head>
+    <title>JavaScript Core Practise</title>
+    <style>
+        div {
+            min-width: 100px;
+            min-height: 100px;
+            border: 1px solid black;
+            padding: 50px;
+        }
+    </style>
+</head>
 
 <body>
-    <p>hello, world</p>
-    <!-- <input onkeyUp="debouncedKeyDown(this.value)" /> -->
-    <input onkeyUp="throttledKeyDown(this.value)" />
-    <!-- <input onkeyUp="onKeyDown(this.value)" /> -->
+    <section>
+        <p>hello, world</p>
+        <!-- <input onkeyUp="debouncedKeyDown(this.value)" /> -->
+        <!-- <input onkeyUp="throttledKeyDown(this.value)" /> -->
+        <!-- <input onkeyUp="onKeyDown(this.value)" /> -->
+    </section name="eventPropagation">
+    <!-- <section>
+        <div id="grandma">
+            <div id="ma">
+                <div id="child">
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section name="eventDelegation">
+        <div>
+            <ul id="category">
+                <li id="laptops">laptops</li>
+                <li id="cameras">cameras</li>
+                <li id="shoes">shoes</li>
+            </ul>
+        </div>
+    </section>
 </body>
+<script type="text/javascript" src="./script.js"></script>
 
 </html>

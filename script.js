@@ -36,3 +36,23 @@ const throttle = (fn, delay) => {
 
 const debouncedKeyDown = debounce(onKeyDown, 10000);
 const throttledKeyDown = throttle(onKeyDown, 2000);
+
+// event bubbling and trickling
+// document
+//   .querySelector("#grandma")
+//   .addEventListener("click", () => console.log("grandma clicked"));
+
+// document
+//   .querySelector("#ma")
+//   .addEventListener("click", () => console.log("ma clicked"));
+
+// document
+//   .querySelector("#child")
+//   .addEventListener("click", () => console.log("child clicked"));
+
+// event delegation
+document.querySelector("#category").addEventListener("click", (e) => {
+  console.log("category clicked", e.target.id);
+  // additional if check avoids nested event bubbling
+  if (e.target.tagName === "LI") window.location.href = `/${e.target.id}`;
+});
