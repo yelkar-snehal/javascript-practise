@@ -66,9 +66,44 @@ console.log("Started script");
 // });
 
 // prototypal inheritance
-let obj = {};
-console.log(obj.__proto__); // attached obj called protype is how js inheritance works
-console.log(obj.__proto__.__proto__); // null
-console.log([].__proto__); // ctor prototype
-console.log([].__proto__.__proto__); //obj prototype chaining
-console.log([].__proto__.__proto__.__proto__); // null
+// let obj = {};
+// console.log(obj.__proto__); // attached obj called protype is how js inheritance works
+// console.log(obj.__proto__.__proto__); // null
+// console.log([].__proto__); // ctor prototype
+// console.log([].__proto__.__proto__); //obj prototype chaining
+// console.log([].__proto__.__proto__.__proto__); // null
+
+// thinking recirsively
+let obj = {
+  name: "Snehal",
+  address: {
+    personal: {
+      city: "Pune",
+      area: "Katraj",
+    },
+    office: {
+      city: "Pune",
+      area: {
+        landmark: "CPK",
+      },
+    },
+  },
+};
+// goal is to flatten the object
+const flatten = function (obj, parent = "") {
+  let flattenedObject = {};
+  for (let key in obj) {
+    if (typeof obj[key] === "object") {
+      flattenedObject = {
+        ...flattenedObject,
+        ...flatten(obj[key], `${parent}_${key}`),
+      };
+    } else {
+      //   console.log(key, obj[key], parent, `${parent}_${key}`);
+      flattenedObject[`${parent}_${key}`] = obj[key];
+    }
+  }
+  return flattenedObject;
+};
+
+console.log(flatten(obj, "user"));
