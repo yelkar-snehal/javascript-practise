@@ -51,8 +51,16 @@ const throttledKeyDown = throttle(onKeyDown, 2000);
 //   .addEventListener("click", () => console.log("child clicked"));
 
 // event delegation
-document.querySelector("#category").addEventListener("click", (e) => {
-  console.log("category clicked", e.target.id);
-  // additional if check avoids nested event bubbling
-  if (e.target.tagName === "LI") window.location.href = `/${e.target.id}`;
+// document.querySelector("#category").addEventListener("click", (e) => {
+//   console.log("category clicked", e.target.id);
+//   // additional if check avoids nested event bubbling
+//   if (e.target.tagName === "LI") window.location.href = `/${e.target.id}`;
+// });
+// event delegation w/ behaviour pattern
+// behaviour pattern is controlling the behaviour of certain html elements
+// event delegation allows this without attaching individual event handlers
+document.querySelector("#form").addEventListener("keyup", (e) => {
+  //   console.log(e);
+  if (e.target.dataset.format === "uppercase")
+    e.target.value = e.target.value.toUpperCase();
 });
