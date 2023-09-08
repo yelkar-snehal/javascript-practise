@@ -59,8 +59,16 @@ console.log("Started script");
 // event delegation w/ behaviour pattern
 // behaviour pattern is controlling the behaviour of certain html elements
 // event delegation allows this without attaching individual event handlers
-document.querySelector("#form").addEventListener("keyup", (e) => {
-  //   console.log(e);
-  if (e.target.dataset.format === "uppercase")
-    e.target.value = e.target.value.toUpperCase();
-});
+// document.querySelector("#form").addEventListener("keyup", (e) => {
+//   //   console.log(e);
+//   if (e.target.dataset.format === "uppercase")
+//     e.target.value = e.target.value.toUpperCase();
+// });
+
+// prototypal inheritance
+let obj = {};
+console.log(obj.__proto__); // attached obj called protype is how js inheritance works
+console.log(obj.__proto__.__proto__); // null
+console.log([].__proto__); // ctor prototype
+console.log([].__proto__.__proto__); //obj prototype chaining
+console.log([].__proto__.__proto__.__proto__); // null
