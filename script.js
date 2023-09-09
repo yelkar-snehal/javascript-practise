@@ -74,21 +74,21 @@ console.log("Started script");
 // console.log([].__proto__.__proto__.__proto__); // null
 
 // thinking recirsively
-let obj = {
-  name: "Snehal",
-  address: {
-    personal: {
-      city: "Pune",
-      area: "Katraj",
-    },
-    office: {
-      city: "Pune",
-      area: {
-        landmark: "CPK",
-      },
-    },
-  },
-};
+// let obj = {
+//   name: "Snehal",
+//   address: {
+//     personal: {
+//       city: "Pune",
+//       area: "Katraj",
+//     },
+//     office: {
+//       city: "Pune",
+//       area: {
+//         landmark: "CPK",
+//       },
+//     },
+//   },
+// };
 // // goal is to flatten the object
 // const flatten = function (obj, parent = "") {
 //   let flattenedObject = {};
@@ -109,9 +109,9 @@ let obj = {
 // console.log(flatten(obj, "user"));
 
 // storage
-const setStorageItem = (key, value) =>
-  localStorage.setItem(key, JSON.stringify(value));
-const getStorageItem = (key) => JSON.parse(localStorage.getItem(key));
+// const setStorageItem = (key, value) =>
+//   localStorage.setItem(key, JSON.stringify(value));
+// const getStorageItem = (key) => JSON.parse(localStorage.getItem(key));
 
-console.log(setStorageItem("user", obj));
-setTimeout(() => console.log(getStorageItem("user")), 5000);
+// console.log(setStorageItem("user", obj));
+// setTimeout(() => console.log(getStorageItem("user")), 5000);
