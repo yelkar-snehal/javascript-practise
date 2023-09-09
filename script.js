@@ -115,3 +115,7 @@ console.log("Started script");
 
 // console.log(setStorageItem("user", obj));
 // setTimeout(() => console.log(getStorageItem("user")), 5000);
+
+// amazon ui question sum(1)(2)(3)(4)...(n)()
+const sum = (a) => (b) => b ? sum(a + b) : a;
+console.log("sum: ", sum(1)(2)(3)(4)(5)());
