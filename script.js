@@ -89,21 +89,29 @@ let obj = {
     },
   },
 };
-// goal is to flatten the object
-const flatten = function (obj, parent = "") {
-  let flattenedObject = {};
-  for (let key in obj) {
-    if (typeof obj[key] === "object") {
-      flattenedObject = {
-        ...flattenedObject,
-        ...flatten(obj[key], `${parent}_${key}`),
-      };
-    } else {
-      //   console.log(key, obj[key], parent, `${parent}_${key}`);
-      flattenedObject[`${parent}_${key}`] = obj[key];
-    }
-  }
-  return flattenedObject;
-};
+// // goal is to flatten the object
+// const flatten = function (obj, parent = "") {
+//   let flattenedObject = {};
+//   for (let key in obj) {
+//     if (typeof obj[key] === "object") {
+//       flattenedObject = {
+//         ...flattenedObject,
+//         ...flatten(obj[key], `${parent}_${key}`),
+//       };
+//     } else {
+//       //   console.log(key, obj[key], parent, `${parent}_${key}`);
+//       flattenedObject[`${parent}_${key}`] = obj[key];
+//     }
+//   }
+//   return flattenedObject;
+// };
 
-console.log(flatten(obj, "user"));
+// console.log(flatten(obj, "user"));
+
+// storage
+const setStorageItem = (key, value) =>
+  localStorage.setItem(key, JSON.stringify(value));
+const getStorageItem = (key) => JSON.parse(localStorage.getItem(key));
+
+console.log(setStorageItem("user", obj));
+setTimeout(() => console.log(getStorageItem("user")), 5000);
