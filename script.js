@@ -119,3 +119,19 @@ console.log("Started script");
 // amazon ui question sum(1)(2)(3)(4)...(n)()
 // const sum = (a) => (b) => b ? sum(a + b) : a;
 // console.log("sum: ", sum(1)(2)(3)(4)(5)());
+
+// drag and drop
+const onDrag = (e) => {
+  e.dataTransfer.setData("text", e.target.id);
+  //   console.log("on drag", e);
+};
+
+const onDrop = (e) => {
+  let t = e.dataTransfer.getData("text");
+  //   console.log("on drop", e, t);
+  e.target.appendChild(document.getElementById(t));
+};
+
+const allowDrop = (e) => {
+  e.preventDefault();
+};
