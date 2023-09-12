@@ -121,24 +121,24 @@ console.log("Started script");
 // console.log("sum: ", sum(1)(2)(3)(4)(5)());
 
 // drag and drop
-const onDrag = (e) => {
-  /**
-   * set on the drag event
-   * can be of any type
-   * type/text, type/html. etc
-   * https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
-   */
-  e.dataTransfer.setData("text/plain", e.target.id);
-  e.dataTransfer.setData("application/x-moz-node", e.target.id);
-  //   console.log("on drag", e);
-};
+// const onDrag = (e) => {
+//   /**
+//    * set on the drag event
+//    * can be of any type
+//    * type/text, type/html. etc
+//    * https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
+//    */
+//   e.dataTransfer.setData("text/plain", e.target.id);
+//   e.dataTransfer.setData("application/x-moz-node", e.target.id);
+//   //   console.log("on drag", e);
+// };
 
-const onDrop = (e) => {
-  let t = e.dataTransfer.getData("application/x-moz-node");
-  //   console.log("on drop", e, t);
-  e.target.appendChild(document.getElementById(t));
-};
+// const onDrop = (e) => {
+//   let t = e.dataTransfer.getData("application/x-moz-node");
+//   //   console.log("on drop", e, t);
+//   e.target.appendChild(document.getElementById(t));
+// };
 
-const allowDrop = (e) => {
-  e.preventDefault();
-};
+// const allowDrop = (e) => {
+//   e.preventDefault();
+// };
