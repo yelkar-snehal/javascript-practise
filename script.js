@@ -122,12 +122,19 @@ console.log("Started script");
 
 // drag and drop
 const onDrag = (e) => {
-  e.dataTransfer.setData("text", e.target.id);
+  /**
+   * set on the drag event
+   * can be of any type
+   * type/text, type/html. etc
+   * https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
+   */
+  e.dataTransfer.setData("text/plain", e.target.id);
+  e.dataTransfer.setData("application/x-moz-node", e.target.id);
   //   console.log("on drag", e);
 };
 
 const onDrop = (e) => {
-  let t = e.dataTransfer.getData("text");
+  let t = e.dataTransfer.getData("application/x-moz-node");
   //   console.log("on drop", e, t);
   e.target.appendChild(document.getElementById(t));
 };
