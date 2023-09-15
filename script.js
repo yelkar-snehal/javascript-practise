@@ -142,3 +142,16 @@ console.log("Started script");
 // const allowDrop = (e) => {
 //   e.preventDefault();
 // };
+
+// function hoisting
+function bigBrother() {
+  function littleBrother() {
+    return "it is me!";
+  }
+  return littleBrother();
+  function littleBrother() {
+    return "no me!";
+  }
+}
+
+console.log(bigBrother());
