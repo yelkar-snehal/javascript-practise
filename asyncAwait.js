@@ -1,4 +1,4 @@
-console.log("async await script");
+// console.log("async await script");
 
 /**
  * async functions always return a promise
@@ -52,22 +52,22 @@ console.log("async await script");
 //   console.log("line after await 2");
 // }
 
-const API_URL = "https://api.github.com/users/yelkar-snehal";
+// const API_URL = "https://api.github.com/users/{}";
 
-async function handlePromise() {
-  // fetch -> response -> json (promise) -> data
-  try {
-    const res = await fetch(API_URL);
-    const data = await res.json();
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-  }
-}
+// async function handlePromise() {
+//   // fetch -> response -> json (promise) -> data
+//   try {
+//     const res = await fetch(API_URL);
+//     const data = await res.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-async function temp() {
-  const t = await handlePromise();
-  console.log(t);
-}
+// async function temp() {
+//   const t = await handlePromise();
+//   console.log(t);
+// }
 
-temp();
+// temp();
