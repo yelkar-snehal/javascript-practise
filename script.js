@@ -160,11 +160,11 @@ console.log("Started script");
 
 let i = "foo";
 
-(function () {
-  console.log("Original value was: " + i);
-  let i = "bar";
-  console.log("New value is: " + i);
-})();
+// (function () {
+//   console.log("Original value was: " + i);
+//   let i = "bar";
+//   console.log("New value is: " + i);
+// })();
 
 /**
  * Original value was: undefined
