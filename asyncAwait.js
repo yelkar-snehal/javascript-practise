@@ -15,15 +15,20 @@ console.log("async await script");
  * once awaited promise is resolved suspended execution restarts
  * JS engine moves ahead, call stack is not blocked
  *
+ * async await is just a syntactic sujar for then and catch
+ * internally then and catch is used by JS engine
+ * chaning can be verbose sometimes, in such cases async await looks cleaner
+ *
+ * for catching errors ctach can be chained or use try catch block
  */
 
-const p = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("Promise resolved"), 5000);
-});
+// const p = new Promise((resolve, reject) => {
+//   setTimeout(() => resolve("Promise resolved"), 5000);
+// });
 
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("Promise resolved"), 10000);
-});
+// const p2 = new Promise((resolve, reject) => {
+//   setTimeout(() => resolve("Promise resolved"), 10000);
+// });
 
 // async function getData() {
 //   //   return "Hello";
@@ -35,16 +40,34 @@ const p2 = new Promise((resolve, reject) => {
 // p.then((res) => console.log(res));
 // console.log("line after then");
 
+// async function handlePromise() {
+//   console.log("started executing promises");
+
+//   const res = await p;
+//   console.log(res);
+//   console.log("line after await");
+
+//   const res2 = await p2;
+//   console.log(res2);
+//   console.log("line after await 2");
+// }
+
+const API_URL = "https://api.github.com/users/yelkar-snehal";
+
 async function handlePromise() {
-  console.log("started executing promises");
-
-  const res = await p;
-  console.log(res);
-  console.log("line after await");
-
-  const res2 = await p2;
-  console.log(res2);
-  console.log("line after await 2");
+  // fetch -> response -> json (promise) -> data
+  try {
+    const res = await fetch(API_URL);
+    const data = await res.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-handlePromise();
+async function temp() {
+  const t = await handlePromise();
+  console.log(t);
+}
+
+temp();
