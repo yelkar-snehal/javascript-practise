@@ -158,7 +158,7 @@ console.log("Started script");
 
 //fn hoisting and iife
 
-let i = "foo";
+// let i = "foo";
 
 // (function () {
 //   console.log("Original value was: " + i);
@@ -185,6 +185,5 @@ let i = "foo";
    })();
 
    therefore if tried with let it would throw the below error
-   Uncaught ReferenceError: Cannot access 'i' before initialization
-
+   
  */
