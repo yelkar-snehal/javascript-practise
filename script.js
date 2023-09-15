@@ -144,14 +144,14 @@ console.log("Started script");
 // };
 
 // function hoisting
-function bigBrother() {
-  function littleBrother() {
-    return "it is me!";
-  }
-  return littleBrother();
-  function littleBrother() {
-    return "no me!";
-  }
-}
+// function bigBrother() {
+//   function littleBrother() {
+//     return "it is me!";
+//   }
+//   return littleBrother();
+//   function littleBrother() {
+//     return "no me!";
+//   }
+// }
 
-console.log(bigBrother());
+// console.log(bigBrother());
