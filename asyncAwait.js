@@ -11,6 +11,9 @@ console.log("async await script");
  *
  * in async await it looks like the JS engine is waiting
  * but it is not
+ * instead it suspends the execution from the await line
+ * once awaited promise is resolved suspended execution restarts
+ * JS engine moves ahead, call stack is not blocked
  *
  */
 
@@ -33,6 +36,8 @@ const p2 = new Promise((resolve, reject) => {
 // console.log("line after then");
 
 async function handlePromise() {
+  console.log("started executing promises");
+
   const res = await p;
   console.log(res);
   console.log("line after await");
