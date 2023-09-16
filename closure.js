@@ -18,3 +18,44 @@ console.log("executing closure script");
  * first letter as Capital
  *
  */
+
+/**
+ * this- object on which function is getting called or window object.
+ * for node, "this" is node object.
+ */
+
+// function print() {
+//   console.log("Printing this:", this);
+// }
+// print();
+
+// //closure- this object
+// function outerFunc() {
+//   console.log("Printing outer this:", this);
+//   return function () {
+//     console.log("Printing inner this:", this);
+//   };
+// }
+
+// let inner = outerFunc();
+// inner();
+
+//this object and problem of loosing this
+const myObj = {
+  name: "Tyrion",
+  myFunction: function () {
+    console.log("Outer:", this.name, this);
+
+    return function () {
+      console.log("Inner:", this.name, this);
+    };
+  },
+};
+
+// rule- object used to call the function is "this" for that function
+let inn = myObj.myFunction();
+inn(); //global execution context's this- window in browser or node in ide
+
+//solution 1- bind()
+let boundIn = inn.bind(myObj);
+boundIn();
