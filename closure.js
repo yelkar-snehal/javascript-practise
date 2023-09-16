@@ -59,3 +59,18 @@ inn(); //global execution context's this- window in browser or node in ide
 //solution 1- bind()
 let boundIn = inn.bind(myObj);
 boundIn();
+
+//solution 2- arrow function
+const myObjNew = {
+  name: "Jon",
+  myFunctionNew: function () {
+    console.log("Outer:", this.name);
+
+    return () => this.name;
+    /* arrow function does not have its own this. it is bound to the outer function's this 
+          or this of its parent. hence we get mynewobj here*/
+  },
+};
+
+let newInner = myObjNew.myFunctionNew();
+console.log("Inner:", newInner());
