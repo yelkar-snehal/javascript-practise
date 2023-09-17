@@ -41,36 +41,73 @@ console.log("executing closure script");
 // inner();
 
 //this object and problem of loosing this
-const myObj = {
-  name: "Tyrion",
-  myFunction: function () {
-    console.log("Outer:", this.name, this);
+// const myObj = {
+//   name: "Tyrion",
+//   myFunction: function () {
+//     console.log("Outer:", this.name, this);
 
-    return function () {
-      console.log("Inner:", this.name, this);
-    };
-  },
-};
+//     return function () {
+//       console.log("Inner:", this.name, this);
+//     };
+//   },
+// };
 
-// rule- object used to call the function is "this" for that function
-let inn = myObj.myFunction();
-inn(); //global execution context's this- window in browser or node in ide
+// // rule- object used to call the function is "this" for that function
+// let inn = myObj.myFunction();
+// inn(); //global execution context's this- window in browser or node in ide
 
-//solution 1- bind()
-let boundIn = inn.bind(myObj);
-boundIn();
+// //solution 1- bind()
+// let boundIn = inn.bind(myObj);
+// boundIn();
 
-//solution 2- arrow function
-const myObjNew = {
-  name: "Jon",
-  myFunctionNew: function () {
-    console.log("Outer:", this.name);
+// //solution 2- arrow function
+// const myObjNew = {
+//   name: "Jon",
+//   myFunctionNew: function () {
+//     console.log("Outer:", this.name);
 
-    return () => this.name;
-    /* arrow function does not have its own this. it is bound to the outer function's this 
-          or this of its parent. hence we get mynewobj here*/
-  },
-};
+//     return () => this.name;
+//     /* arrow function does not have its own this. it is bound to the outer function's this
+//           or this of its parent. hence we get mynewobj here*/
+//   },
+// };
 
-let newInner = myObjNew.myFunctionNew();
-console.log("Inner:", newInner());
+// let newInner = myObjNew.myFunctionNew();
+// console.log("Inner:", newInner());
+
+// Puzzle: Block scope and closure
+// solution- let i
+// var puzzleOne = function () {
+//   var arr = [];
+//   for (var i = 0; i < 3; i++) {
+//     console.log("fn", i);
+//     arr.push(function () {
+//       console.log("hey", i);
+//     });
+//     // (function () {
+//     //   console.log(i);
+//     // })();
+//   }
+
+//   return arr;
+// };
+
+// puzzleOne();
+// puzzleOne()[0]();
+// puzzleOne()[1]();
+// puzzleOne()[2]();
+
+var a = 1;
+a = "str";
+var b = 1;
+
+//call, apply, bind
+function sum(z) {
+  return this.a + this.b + z;
+}
+
+console.log("Problem:", sum(1));
+
+console.log("Solution");
+console.log(sum.apply({ a: 1, b: 2 }, [1]));
+console.log(sum.call({ a: 2, b: 2 }, 4));
