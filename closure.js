@@ -108,6 +108,10 @@ function sum(z) {
 
 console.log("Problem:", sum(1));
 
+/**
+ * since a can be reinitialised to something
+ * our functions can be passed with a dedicated this object
+ */
 console.log("Solution");
 console.log(sum.apply({ a: 1, b: 2 }, [1]));
 console.log(sum.call({ a: 2, b: 2 }, 4));
