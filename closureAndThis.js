@@ -119,14 +119,14 @@ console.log("executing closure script");
 // this examples
 
 // obj with dot operaor sets its this to that object
-var x = 1;
+// var x = 1;
 
-function foo() {
-  return this.x;
-}
-console.log(foo()); // 1
+// function foo() {
+//   return this.x;
+// }
+// console.log(foo()); // 1
 
-var obj = { x: 2 };
-obj.foo = foo;
-console.log(obj);
-console.log(obj.foo()); // 2
+// var obj = { x: 2 };
+// obj.foo = foo;
+// console.log(obj);
+// console.log(obj.foo()); // 2
