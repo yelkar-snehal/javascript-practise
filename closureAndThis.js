@@ -97,21 +97,36 @@ console.log("executing closure script");
 // puzzleOne()[1]();
 // puzzleOne()[2]();
 
-var a = 1;
-a = "str";
-var b = 1;
+// var a = 1;
+// a = "str";
+// var b = 1;
 
-//call, apply, bind
-function sum(z) {
-  return this.a + this.b + z;
+// //call, apply, bind
+// function sum(z) {
+//   return this.a + this.b + z;
+// }
+
+// console.log("Problem:", sum(1));
+
+// /**
+//  * since a can be reinitialised to something
+//  * our functions can be passed with a dedicated this object
+//  */
+// console.log("Solution");
+// console.log(sum.apply({ a: 1, b: 2 }, [1]));
+// console.log(sum.call({ a: 2, b: 2 }, 4));
+
+// this examples
+
+// obj with dot operaor sets its this to that object
+var x = 1;
+
+function foo() {
+  return this.x;
 }
+console.log(foo()); // 1
 
-console.log("Problem:", sum(1));
-
-/**
- * since a can be reinitialised to something
- * our functions can be passed with a dedicated this object
- */
-console.log("Solution");
-console.log(sum.apply({ a: 1, b: 2 }, [1]));
-console.log(sum.call({ a: 2, b: 2 }, 4));
+var obj = { x: 2 };
+obj.foo = foo;
+console.log(obj);
+console.log(obj.foo()); // 2
