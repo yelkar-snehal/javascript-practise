@@ -201,38 +201,38 @@ console.log("Started script");
 // console.log(c); // 5
 
 //pass by reference
-var arr = [1, 2, 3];
-function ref(arr) {
-  arr[0] = 0; //original array has been changed
-  console.log(arr);
-}
+// var arr = [1, 2, 3];
+// function ref(arr) {
+//   arr[0] = 0; //original array has been changed
+//   console.log(arr);
+// }
 
-console.log(arr);
-ref(arr);
-console.log(arr);
+// console.log(arr);
+// ref(arr);
+// console.log(arr);
 
-//solution
-var arr1 = [1, 2, 3];
-function ref2(arr1) {
-  var arr2 = [...arr1]; //array/object cloning to keep original array as it is
-  arr2[0] = 3;
-  console.log(arr2);
-}
+// //solution
+// var arr1 = [1, 2, 3];
+// function ref2(arr1) {
+//   var arr2 = [...arr1]; //array/object cloning to keep original array as it is
+//   arr2[0] = 3;
+//   console.log(arr2);
+// }
 
-console.log("Original:", arr1);
-ref2(arr1);
+// console.log("Original:", arr1);
+// ref2(arr1);
 
-//object- pass by reference example
-let person = {
-  name: "Jon",
-  age: 28,
-};
+// //object- pass by reference example
+// let person = {
+//   name: "Jon",
+//   age: 28,
+// };
 
-function updatePerson(pObj) {
-  // let copy = { ...pObj };
-  pObj.age = 20;
-  // console.log(copy);
-}
+// function updatePerson(pObj) {
+//   // let copy = { ...pObj };
+//   pObj.age = 20;
+//   // console.log(copy);
+// }
 
-updatePerson(person);
-console.log(person);
+// updatePerson(person);
+// console.log(person);

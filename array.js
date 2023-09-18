@@ -1,14 +1,14 @@
 console.log("Started executing array script");
 
-Array.prototype.myMap = function (fn) {
-  var newarr = [];
-  var len = this.length;
-  for (var i = 0; i < len; i++) {
-    newarr.push(fn(this[i]));
-  }
-  return newarr;
-};
-console.log([1, 2, 3].myMap((element) => element + 2));
+// Array.prototype.myMap = function (fn) {
+//   var newarr = [];
+//   var len = this.length;
+//   for (var i = 0; i < len; i++) {
+//     newarr.push(fn(this[i]));
+//   }
+//   return newarr;
+// };
+// console.log([1, 2, 3].myMap((element) => element + 2));
 
 /**
  * newarr.push(fn(arr[i])); is executed immediately with i
