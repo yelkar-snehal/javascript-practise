@@ -164,21 +164,21 @@ console.log("executing closure script");
 // const myMethod = myObject.myMethod;
 // myMethod(); // this === window or global object
 
-const myObject = {
-  myArrowFunction: null,
-  myMethod: function () {
-    this.myArrowFunction = () => {
-      console.log(this);
-    };
-  },
-};
+// const myObject = {
+//   myArrowFunction: null,
+//   myMethod: function () {
+//     this.myArrowFunction = () => {
+//       console.log(this);
+//     };
+//   },
+// };
 
-myObject.myMethod(); // this === myObject
+// myObject.myMethod(); // this === myObject
 
-myObject.myArrowFunction(); // this === myObject
+// myObject.myArrowFunction(); // this === myObject
 
-const myArrowFunction = myObject.myArrowFunction;
-myArrowFunction(); // this === myObject
+// const myArrowFunction = myObject.myArrowFunction;
+// myArrowFunction(); // this === myObject
 
 /**
  * When we call myObject.myMethod(),
