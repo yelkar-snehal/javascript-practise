@@ -37,3 +37,36 @@ console.log("Started executing array script");
 // console.log(testArr[0]());
 // console.log(testArr[1]());
 // console.log(testArr[2]());
+
+const n = [1, 2, 3, 4, 5, 6, 7, 8];
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4,
+  e: 5,
+};
+
+//myreduce
+Array.prototype.myReduce = function (fn, defaultVal) {
+  let output = defaultVal;
+  for (let i = 0; i < this.length; i++) {
+    output = fn(output, this[i]);
+  }
+  return output;
+};
+
+const reduceOutput = n.myReduce((accumulator, element) => {
+  return accumulator + element;
+}, 0);
+
+console.log(reduceOutput);
+
+const swappedObj = Object.keys(obj).myReduce((acc, key) => {
+  return {
+    ...acc,
+    [obj[key]]: key,
+  };
+}, {});
+
+console.log(swappedObj);
