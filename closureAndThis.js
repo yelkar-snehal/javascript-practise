@@ -130,3 +130,25 @@ console.log("executing closure script");
 // obj.foo = foo;
 // console.log(obj);
 // console.log(obj.foo()); // 2
+// this for function and arrow function
+// const obj = {
+//   title: "Title",
+//   arr: [1, 2, 3],
+//   func: function () {
+//     console.log(this.title);
+//     //problem
+//     this.arr.forEach(function (element) {
+//       console.log(`${this.title} ${element}`);
+//     });
+
+//     //solution
+//     this.arr.forEach((element) => {
+//       console.log(`${this.title} ${element}`);
+//     });
+//   },
+//   aFunc: () => {
+//     console.log(this.title);
+//   },
+// };
+// obj.func();
+// obj.aFunc();
