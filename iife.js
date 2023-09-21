@@ -32,3 +32,26 @@ console.log("New value outside iife is: " + i);
    therefore if tried with let it would throw the below error
    Uncaught ReferenceError: Cannot access 'i' before initialization
  */
+
+/* 
+iife- 
+prevents polluting global scope 
+
+no overwriting of global variables
+
+can be used as closure. function variables cannot be modified from outside. 
+only returned function can change the value of variable and returns updated value
+eg- id generation
+sort of like a generator function
+*/
+const newEmp = (function () {
+  let id = 0;
+  return function () {
+    return id++;
+  };
+})();
+
+console.log(newEmp());
+console.log(newEmp());
+console.log(newEmp());
+console.log(newEmp());
