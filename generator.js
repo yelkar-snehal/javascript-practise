@@ -20,3 +20,8 @@ console.log(gen.next().value); // 3
 console.log(gen.next().value); // 4
 console.log(gen.next().value); // undefined
 // …
+
+/**
+ * Generators are basically syntactic sugar for creating iterators.
+ * Closures are functions that have free variables. Generator functions can be closures.
+ */
