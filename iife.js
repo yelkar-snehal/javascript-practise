@@ -1,13 +1,15 @@
 //fn hoisting and iife
 console.log("executing iife script");
 
-// let i = "foo";
+var i = "foo";
 
-// (function () {
-//   console.log("Original value was: " + i);
-//   let i = "bar";
-//   console.log("New value is: " + i);
-// })();
+(function () {
+  console.log("Original value was: " + i);
+  var i = "bar";
+  console.log("New value is: " + i);
+})();
+
+console.log("New value outside iife is: " + i);
 
 /**
  * Original value was: undefined
@@ -28,5 +30,5 @@ console.log("executing iife script");
    })();
 
    therefore if tried with let it would throw the below error
-   
+   Uncaught ReferenceError: Cannot access 'i' before initialization
  */
