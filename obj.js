@@ -54,12 +54,12 @@ const first = new Map([
   [1, "one"],
 ]);
 
-console.log(
-  "Object.entries alike structure to map --> back to iterator using entries -->  Object.entries alike",
-  first,
-  first.entries(),
-  [...first.entries()]
-);
+// console.log(
+//   "Object.entries alike structure to map --> back to iterator using entries -->  Object.entries alike",
+//   first,
+//   first.entries(),
+//   [...first.entries()]
+// );
 
 const second = {
   2: "two",
@@ -67,6 +67,30 @@ const second = {
   1: "one",
 };
 
-console.log("Object.entries", second, Object.entries(second), [
-  ...Object.entries(second),
-]);
+// console.log("Object.entries", second, Object.entries(second), [
+//   ...Object.entries(second),
+// ]);
+
+const mapAsc = new Map(
+  [...first.entries()].sort((a, b) => {
+    console.log("each entry ", a, b);
+    // by value
+    // const t1 = a[0] > b[0] || (a[0] === b[0] ? 0 : -1);
+    // const t2 = a[0] - b[0];
+    // console.log(t1, Boolean(t1), t2, Boolean(t2));
+    return a[0] - b[0];
+  })
+);
+console.log("mapAsc", mapAsc);
+
+const objAsc = new Map(
+  Object.entries(second).sort((a, b) => {
+    console.log("each entry ", a, b);
+    // by value
+    // const t1 = a[0] > b[0] || (a[0] === b[0] ? 0 : -1);
+    // const t2 = a[0] - b[0];
+    // console.log(t1, Boolean(t1), t2, Boolean(t2));
+    return a[0] - b[0];
+  })
+);
+console.log("objAsc", objAsc);
