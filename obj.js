@@ -46,3 +46,27 @@ console.log("Started executing obj script");
 // }
 // // pointValues({ name: "jerry", age: 2 });
 // pointValues(undefined);
+
+// map
+const first = new Map([
+  [2, "two"],
+  [3, "three"],
+  [1, "one"],
+]);
+
+console.log(
+  "Object.entries alike structure to map --> back to iterator using entries -->  Object.entries alike",
+  first,
+  first.entries(),
+  [...first.entries()]
+);
+
+const second = {
+  2: "two",
+  3: "three",
+  1: "one",
+};
+
+console.log("Object.entries", second, Object.entries(second), [
+  ...Object.entries(second),
+]);
