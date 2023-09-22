@@ -44,14 +44,14 @@ only returned function can change the value of variable and returns updated valu
 eg- id generation
 sort of like a generator function
 */
-const newEmp = (function () {
-  let id = 0;
-  return function () {
-    return id++;
-  };
-})();
+// const newEmp = (function () {
+//   let id = 0;
+//   return function () {
+//     return id++;
+//   };
+// })();
 
-console.log(newEmp());
-console.log(newEmp());
-console.log(newEmp());
-console.log(newEmp());
+// console.log(newEmp());
+// console.log(newEmp());
+// console.log(newEmp());
+// console.log(newEmp());
