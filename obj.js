@@ -48,11 +48,11 @@ console.log("Started executing obj script");
 // pointValues(undefined);
 
 // map
-const first = new Map([
-  [2, "two"],
-  [3, "three"],
-  [1, "one"],
-]);
+// const first = new Map([
+//   [2, "two"],
+//   [3, "three"],
+//   [1, "one"],
+// ]);
 
 // console.log(
 //   "Object.entries alike structure to map --> back to iterator using entries -->  Object.entries alike",
@@ -61,36 +61,68 @@ const first = new Map([
 //   [...first.entries()]
 // );
 
-const second = {
-  2: "two",
-  3: "three",
-  1: "one",
-};
+// const second = {
+//   2: "two",
+//   3: "three",
+//   1: "one",
+// };
 
 // console.log("Object.entries", second, Object.entries(second), [
 //   ...Object.entries(second),
 // ]);
 
-const mapAsc = new Map(
-  [...first.entries()].sort((a, b) => {
-    console.log("each entry ", a, b);
-    // by value
-    // const t1 = a[0] > b[0] || (a[0] === b[0] ? 0 : -1);
-    // const t2 = a[0] - b[0];
-    // console.log(t1, Boolean(t1), t2, Boolean(t2));
-    return a[0] - b[0];
-  })
-);
-console.log("mapAsc", mapAsc);
+// const mapAsc = new Map(
+//   [...first.entries()].sort((a, b) => {
+//     console.log("each entry ", a, b);
+//     // by value
+//     // const t1 = a[0] > b[0] || (a[0] === b[0] ? 0 : -1);
+//     // const t2 = a[0] - b[0];
+//     // console.log(t1, Boolean(t1), t2, Boolean(t2));
+//     return a[0] - b[0];
+//   })
+// );
+// console.log("mapAsc", mapAsc);
 
-const objAsc = new Map(
-  Object.entries(second).sort((a, b) => {
-    console.log("each entry ", a, b);
-    // by value
-    // const t1 = a[0] > b[0] || (a[0] === b[0] ? 0 : -1);
-    // const t2 = a[0] - b[0];
-    // console.log(t1, Boolean(t1), t2, Boolean(t2));
-    return a[0] - b[0];
-  })
-);
-console.log("objAsc", objAsc);
+// const objAsc = new Map(
+//   Object.entries(second).sort((a, b) => {
+//     console.log("each entry ", a, b);
+//     // by value
+//     // const t1 = a[0] > b[0] || (a[0] === b[0] ? 0 : -1);
+//     // const t2 = a[0] - b[0];
+//     // console.log(t1, Boolean(t1), t2, Boolean(t2));
+//     return a[0] - b[0];
+//   })
+// );
+// console.log("objAsc", objAsc);
+
+//object creation
+var o1 = new Object({ test: 1 });
+console.log(o1);
+
+var o2 = { test: 2 };
+console.log(o2);
+
+//object.create({}) creates empty object even though object is passed
+/* creates a new object, using an existing object as the prototype of the 
+  newly created object.
+   */
+var o3 = Object.create({ a: 1, b: 2 });
+console.log(o3); //shows {}
+
+o3 = { a: 1, b: 2 };
+console.log(o3); // { a: 1, b: 2 }
+
+var person = { height: 6, weight: 70 };
+var newObj = Object.create(person);
+console.log(newObj); // {}
+//person type object created. has all properties of person
+
+newObj.height = 5; //set property for new object
+newObj.bmi = 20; //add new key
+console.log(newObj, person);
+
+//check if key present and accessing elements
+if (newObj.height) console.log(newObj.height, newObj["height"]);
+
+if (newObj.abcd) console.log(newObj.abcd, newObj["abcd"]);
+else console.log(newObj.abcd); //undefined
