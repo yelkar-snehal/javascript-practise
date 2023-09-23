@@ -96,33 +96,33 @@ console.log("Started executing obj script");
 // console.log("objAsc", objAsc);
 
 //object creation
-var o1 = new Object({ test: 1 });
-console.log(o1);
+// var o1 = new Object({ test: 1 });
+// console.log(o1);
 
-var o2 = { test: 2 };
-console.log(o2);
+// var o2 = { test: 2 };
+// console.log(o2);
 
 //object.create({}) creates empty object even though object is passed
 /* creates a new object, using an existing object as the prototype of the 
   newly created object.
    */
-var o3 = Object.create({ a: 1, b: 2 });
-console.log(o3); //shows {}
+// var o3 = Object.create({ a: 1, b: 2 });
+// console.log(o3); //shows {}
 
-o3 = { a: 1, b: 2 };
-console.log(o3); // { a: 1, b: 2 }
+// o3 = { a: 1, b: 2 };
+// console.log(o3); // { a: 1, b: 2 }
 
-var person = { height: 6, weight: 70 };
-var newObj = Object.create(person);
-console.log(newObj); // {}
-//person type object created. has all properties of person
+// var person = { height: 6, weight: 70 };
+// var newObj = Object.create(person);
+// console.log(newObj); // {}
+// //person type object created. has all properties of person
 
-newObj.height = 5; //set property for new object
-newObj.bmi = 20; //add new key
-console.log(newObj, person);
+// newObj.height = 5; //set property for new object
+// newObj.bmi = 20; //add new key
+// console.log(newObj, person);
 
-//check if key present and accessing elements
-if (newObj.height) console.log(newObj.height, newObj["height"]);
+// //check if key present and accessing elements
+// if (newObj.height) console.log(newObj.height, newObj["height"]);
 
-if (newObj.abcd) console.log(newObj.abcd, newObj["abcd"]);
-else console.log(newObj.abcd); //undefined
+// if (newObj.abcd) console.log(newObj.abcd, newObj["abcd"]);
+// else console.log(newObj.abcd); //undefined
