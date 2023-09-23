@@ -3,7 +3,7 @@
 
 <head>
     <title>JavaScript Core Practise</title>
-    <style>
+    <!-- <style>
         div {
             min-width: 100px;
             min-height: 100px;
@@ -18,7 +18,7 @@
         .dropTarget {
             flex: 1;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -57,6 +57,23 @@
             src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" draggable="true"
             ondragstart="onDrag(event)" id="dragTarget">
     </section> -->
+    <section name="web-worker">
+        <div id="browser"></div>
+        <div class="controls" tabindex="0">
+            <form>
+                <div>
+                    <label for="number1">Multiply number 1: </label>
+                    <input type="text" id="number1" value="0" />
+                </div>
+                <div>
+                    <label for="number2">Multiply number 2: </label>
+                    <input type="text" id="number2" value="0" />
+                </div>
+            </form>
+
+            <p class="result">Result: 0</p>
+        </div>
+    </section>
 </body>
 <!-- <script type="text/javascript" src="./script.js"></script> -->
 <!-- <script type="text/javascript" src="./asyncAwait.js"></script> -->
@@ -66,5 +83,6 @@
 <!-- <script type="text/javascript" src="./obj.js"></script> -->
 <!-- <script type="text/javascript" src="./generator.js"></script> -->
 <!-- <script type="text/javascript" src="./iife.js"></script> -->
+<script type="text/javascript" src="./webworker.js"></script>
 
 </html>
