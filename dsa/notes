@@ -1,0 +1,7 @@
+The primary motive to use DSA is to solve a problem effectively and efficiently.
+
+efficeiency is mesaured in terms of complexities:
+
+- time complexity: time reqd to execute a program
+- space complexity: space taken by program's variables
+  - auxilary space complexity: space taken by variables apart from the input params
