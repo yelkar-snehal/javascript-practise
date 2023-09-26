@@ -12,6 +12,14 @@ efficeiency is mesaured in terms of complexities:
   - even in early exits loops, worst case scenario is n, therefore O(n)
   - common complexities: O(1) [1 can be any other number], O(logn), O(nlogn) [quicksort], O(n^2), O(2^n), O(sqrt(n))
 - imp concepts:
+
   - growth is w.r.t. the i/p
   - constants are dropped
   - always consider the worst case scenario
+
+- arrays
+  - contiguos memory space
+  - getting something at an index: width of the type is multiplied by the offset, a[0], here offset is zero, assume width is 8 bits, O(1), size width and offset are constant/fixed, don't grow w/ the i/p
+  - insertion: go to a's mem address, width offset, and overwrite
+  - deletion: go to a's mem address, width offset, and set to nullish
+  - technically insertt, push, pop aren't available in static or traditional arrays(which needs fixed need to be passed in), so [] isn't technically an array!
