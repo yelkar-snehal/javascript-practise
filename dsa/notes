@@ -5,3 +5,13 @@ efficeiency is mesaured in terms of complexities:
 - time complexity: time reqd to execute a program
 - space complexity: space taken by program's variables
   - auxilary space complexity: space taken by variables apart from the input params
+- big O used to measure the complexity
+  - compuatation growth w.r.t. the i/p
+  - O(n) -> linear growth, loop's length grows n grows, constants are dropped, 2 sequential loops don't make O(2n), but O(n) [n^2 matters though]
+  - practical caveat: in sort insertion vs quick sort; smaller n^2 faster than a much larger dropped constant
+  - even in early exits loops, worst case scenario is n, therefore O(n)
+  - common complexities: O(1) [1 can be any other number], O(logn), O(nlogn) [quicksort], O(n^2), O(2^n), O(sqrt(n))
+- imp concepts:
+  - growth is w.r.t. the i/p
+  - constants are dropped
+  - always consider the worst case scenario
