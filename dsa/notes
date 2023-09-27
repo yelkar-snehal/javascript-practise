@@ -39,3 +39,9 @@ efficeiency is mesaured in terms of complexities:
       - if we are scanning the input, the timecomplexity becomes O(nlogn)
 
     - two crystal balls dropped from the building, optimised way to find where they'll break?, at which floor if top is given? use O(sqrt(n)) coomplexity
+
+  - sorting: X[i] <= X[i + 1]
+
+    - bubble sort:
+      - time complexity, n(n + 1)/2 => dropping insignificant additions makes it O(n^2)
+      -
