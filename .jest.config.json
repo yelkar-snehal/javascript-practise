@@ -1,0 +1,9 @@
+{
+    "clearMocks": true,
+    "moduleNameMapper": {
+        "@code/(.*)": [
+            "<rootDir>/dsa/$1"
+        ]
+    },
+    "preset": "ts-jest"
+}
