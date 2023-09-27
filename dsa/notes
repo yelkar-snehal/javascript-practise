@@ -27,5 +27,11 @@ efficeiency is mesaured in terms of complexities:
   - has .length prooperty
 
   - linear search:
+
     - indexOf does linear search, O(n) since complexity grows w/ input n
-    -
+
+  - binary search:
+
+    - check if dataset is ordered?
+    - time complexity O(log n), since we halve the array and traverse till 1 element is left
+    - if we are scanning the input, the timecomplexity becomes O(nlogn)
