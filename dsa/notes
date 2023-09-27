@@ -35,3 +35,5 @@ efficeiency is mesaured in terms of complexities:
     - check if dataset is ordered?
     - time complexity O(log n), since we halve the array and traverse till 1 element is left
     - if we are scanning the input, the timecomplexity becomes O(nlogn)
+
+  - two crystal balls dropped from the building, optimised way to find where they'll break?, at which floor if top is given? use O(sqrt(n)) coomplexity
