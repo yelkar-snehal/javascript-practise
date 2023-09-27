@@ -26,14 +26,16 @@ efficeiency is mesaured in terms of complexities:
   - technically insertt, push, pop aren't available in static or traditional arrays(which needs fixed need to be passed in), so [] isn't technically an array!
   - has .length prooperty
 
-  - linear search:
+  - seraching:
 
-    - indexOf does linear search, O(n) since complexity grows w/ input n
+    - linear search:
 
-  - binary search:
+      - indexOf does linear search, O(n) since complexity grows w/ input n
 
-    - check if dataset is ordered?
-    - time complexity O(log n), since we halve the array and traverse till 1 element is left
-    - if we are scanning the input, the timecomplexity becomes O(nlogn)
+    - binary search:
 
-  - two crystal balls dropped from the building, optimised way to find where they'll break?, at which floor if top is given? use O(sqrt(n)) coomplexity
+      - check if dataset is ordered?
+      - time complexity O(log n), since we halve the array and traverse till 1 element is left
+      - if we are scanning the input, the timecomplexity becomes O(nlogn)
+
+    - two crystal balls dropped from the building, optimised way to find where they'll break?, at which floor if top is given? use O(sqrt(n)) coomplexity
