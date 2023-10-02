@@ -1,6 +1,6 @@
 class Node<T> {
   public value: T | null;
-  public next: T | null;
+  public next: Node<T> | null;
 
   constructor(value: T | null = null) {
     this.value = value;
@@ -21,13 +21,31 @@ export default class SinglyLinkedList<T> {
 
   prepend(item: T): void {
     const node = new Node<T>(item);
-    node.next = this.head as T;
+    node.next = this.head as Node<T>;
     this.head = node;
     if (!this.length) this.tail = node;
     this.length++;
   }
 
-  insertAt(item: T, idx: number): void {}
+  insertAt(item: T, idx: number): void {
+    if (idx > this.length)
+      throw new Error(
+        `IndexOutOfBounds: Cannot insert at index ${idx} with length ${this.length}`
+      );
+
+    let prevNode = this.head;
+    if (!prevNode) this.head = new Node<T>(item);
+    else {
+      for (let i = 1; i < idx - 1; i++) {
+        prevNode = prevNode?.next as Node<T>;
+      }
+      const node = new Node<T>(item);
+      node.next = prevNode.next;
+      prevNode.next = node;
+    }
+    this.length++;
+  }
+
   append(item: T): void {}
   remove(item: T): T | undefined {
     return;

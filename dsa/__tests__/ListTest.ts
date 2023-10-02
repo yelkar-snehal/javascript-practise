@@ -17,6 +17,8 @@ export function test_list(list: List<number>): void {
   list.prepend(5);
   list.prepend(7);
   list.prepend(9);
+  list.insertAt(10, 1);
+  expect(() => list.insertAt(1, 13)).toThrowError();
 
   console.log(list);
 
