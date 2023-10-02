@@ -46,8 +46,12 @@ efficeiency is mesaured in terms of complexities:
       - time complexity, n(n + 1)/2 => dropping insignificant additions makes it O(n^2)
 
 - linked lists
+
   - O(1) deletion, inssertion
   - however if insertion deletion depends on the traversal of the linked list, O(n)
   - non contiguos memory allocation
   - singly/doubly depending on prev of a node
   - node can be of a generic type T which has next and/or prev to oint to another node
+
+- miscellaneous
+  - Note: You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail. jestjs.io/docs expect#tothrowerror
