@@ -3,7 +3,7 @@ export function test_list(list: List<number>): void {
   list.append(7);
   list.append(9);
 
-  // expect(list.get(2)).toEqual(9);
+  expect(list.get(2)).toEqual(9);
   // expect(list.removeAt(1)).toEqual(7);
   // expect(list.length).toEqual(2);
 
@@ -20,7 +20,7 @@ export function test_list(list: List<number>): void {
   //   list.insertAt(10, 1);
   //   expect(() => list.insertAt(1, 13)).toThrowError();
 
-  list.print();
+  //   list.print();
   //   console.log(list);
 
   // expect(list.get(2)).toEqual(5);
