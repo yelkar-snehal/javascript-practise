@@ -46,7 +46,16 @@ export default class SinglyLinkedList<T> {
     this.length++;
   }
 
-  append(item: T): void {}
+  append(item: T): void {
+    if (!this.length) this.tail = this.head = new Node<T>(item);
+    if (this.length && this.tail) {
+      const node = new Node<T>(item) as Node<T>;
+      this.tail.next = node;
+      this.tail = node;
+    }
+    this.length++;
+  }
+
   remove(item: T): T | undefined {
     return;
   }
@@ -55,5 +64,15 @@ export default class SinglyLinkedList<T> {
   }
   removeAt(idx: number): T | undefined {
     return;
+  }
+
+  print(): void {
+    let i = 0,
+      current = this.head;
+    while (i < this.length) {
+      console.log(current);
+      current = current?.next as Node<T>;
+      i++;
+    }
   }
 }

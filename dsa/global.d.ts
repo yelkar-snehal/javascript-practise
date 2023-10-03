@@ -1,4 +1,5 @@
 declare interface List<T> {
+  print(): void;
   get length(): number;
   removeAt(index: number): T | undefined;
   remove(item: T): T | undefined;
