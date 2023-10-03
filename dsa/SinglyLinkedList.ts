@@ -65,15 +65,27 @@ export default class SinglyLinkedList<T> {
     if (!currentNode?.next) return currentNode?.value;
     if (currentNode) {
       for (let i = 0; i < idx; i++) {
-        currentNode = currentNode.next as Node<T>;
+        currentNode = currentNode?.next as Node<T>;
       }
       return currentNode?.value;
     }
     return;
   }
 
-  removeAt(idx: number): T | undefined {
-    return;
+  removeAt(idx: number): T | null | undefined {
+    if (this.length < idx) return;
+    if (0 === idx) this.head = this.tail = null;
+    let currentNode = this.head;
+    for (let i = 1; i < idx; i++) {
+      currentNode = currentNode?.next as Node<T>;
+    }
+    let removedNode;
+    if (currentNode?.next) {
+      removedNode = currentNode?.next;
+      currentNode.next = currentNode?.next?.next;
+      this.length--;
+    }
+    return removedNode?.value;
   }
 
   print(): void {
