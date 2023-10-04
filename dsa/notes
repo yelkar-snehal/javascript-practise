@@ -54,4 +54,11 @@ efficeiency is mesaured in terms of complexities:
   - node can be of a generic type T which has next and/or prev to oint to another node
 
 - miscellaneous
+
   - Note: You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail. jestjs.io/docs expect#tothrowerror
+
+- queue
+  - ds on top of a linked list
+  - first in first out
+  - constraining the insertion and removal logic, no need to traverse
+  - therefore O(1)
