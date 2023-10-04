@@ -62,3 +62,4 @@ efficeiency is mesaured in terms of complexities:
   - first in first out
   - constraining the insertion and removal logic, no need to traverse
   - therefore O(1)
+  - generally has only three methods: enqueue, deque, and peek
