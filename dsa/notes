@@ -58,8 +58,16 @@ efficeiency is mesaured in terms of complexities:
   - Note: You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail. jestjs.io/docs expect#tothrowerror
 
 - queue
+
   - ds on top of a linked list
   - first in first out
   - constraining the insertion and removal logic, no need to traverse
-  - therefore O(1)
+  - therefore O(1), constant not considering JS time to access obj properties (might be logn)
   - generally has only three methods: enqueue, deque, and peek
+
+- stack
+  - built on top of a linked list
+  - first in last out
+  - O(1), constant not considering JS time to access obj properties (might be logn)
+  - need to traverse backwards, hence new links are formed first and then head is moved
+  - used mostly in resursion, stack trace of fn in erros
