@@ -62,12 +62,19 @@ efficeiency is mesaured in terms of complexities:
   - ds on top of a linked list
   - first in first out
   - constraining the insertion and removal logic, no need to traverse
-  - therefore O(1), constant not considering JS time to access obj properties (might be logn)
+  - therefore O(1), constant not considering JS time to access obj properties (might be logn)˝
   - generally has only three methods: enqueue, deque, and peek
 
 - stack
+
   - built on top of a linked list
   - first in last out
   - O(1), constant not considering JS time to access obj properties (might be logn)
   - need to traverse backwards, hence new links are formed first and then head is moved
   - used mostly in resursion, stack trace of fn in erros
+
+- array vs linked list
+  - usability
+  - time
+  - space
+  - example: frontend apis has to be limited to 5, so array would require frequent shit and unshift; this can be instead be done w/ a queue(linked list)
