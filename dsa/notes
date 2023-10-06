@@ -56,6 +56,7 @@ efficeiency is mesaured in terms of complexities:
 - miscellaneous
 
   - Note: You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail. jestjs.io/docs expect#tothrowerror
+  - buffer is similar to arraylist, also slice method on both will return a shallow copy of the data structure, i.e., they refer to the same contiguos memory location with different indices
 
 - queue
 
