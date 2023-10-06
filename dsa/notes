@@ -81,7 +81,9 @@ efficeiency is mesaured in terms of complexities:
   - example: frontend apis has to be limited to 5, so array would require frequent shit and unshift; this can be instead be done w/ a queue(linked list)
 
 - ArrayList
+
   - which is what [] is in JS
+  - since get, push and pop are constant with time complexity O(1), but shift and unshift grow linearly with time complexity O(n)
   - index based operations are faster with the time complexity of O(1)
   - operations like stack, pop and push are also faster with the time complexity of O(1), since the length is fixed and independent of the input
   - however operations like enqueue and deque can be slower if there are many elements in the arraylist, since we've to shift and unshift the elements
