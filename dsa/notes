@@ -88,3 +88,9 @@ efficeiency is mesaured in terms of complexities:
   - index based operations are faster with the time complexity of O(1)
   - operations like stack, pop and push are also faster with the time complexity of O(1), since the length is fixed and independent of the input
   - however operations like enqueue and deque can be slower if there are many elements in the arraylist, since we've to shift and unshift the elements
+
+- Recursion
+  - base case is the most important, ie the exit case
+  - return address, return value and arguments to the function have to be considered
+  - 3 steps: pre, recurse, and post
+  - generally go down the stack first, then after hitting the base case, traverse up the stack
