@@ -8,3 +8,8 @@ declare interface List<T> {
   append(item: T): void;
   insertAt(item: T, idx: number): void;
 }
+
+declare type Point = {
+  x: number;
+  y: number;
+};
