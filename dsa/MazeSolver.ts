@@ -3,7 +3,8 @@ function walk(
   wall: string,
   curr: Point,
   end: Point,
-  seen: boolean[][]
+  seen: boolean[][],
+  path: Point[]
 ): boolean {
   // base case
   // 1. off the map
@@ -30,6 +31,15 @@ function walk(
   if (seen[curr.y][curr.x]) {
     return false;
   }
+  // recursion
+  // pre
+  path.push(curr);
+
+  // recurse
+
+  // post
+  path.pop();
+
   return false;
 }
 
