@@ -1,3 +1,13 @@
 - everything in JS happens inside execution context
 - execution context is like a big box containing memory component i.e, variaable environment (values and functions); 2nd component is code or thread of exceution (executes code line one at a time)
 - js is synchronous single threaded language; i.e, it can only exceute one command at a time
+- 2 phases are memory creation and code execution
+- during memory creation phase, values for variables are initialised with "undefined" whereas functions are kept as it is
+- "undefined" can be considered as a placeholder, a special keyword
+- during phase 2, i.e, code exceution, actual values are assigned, fn defns are untouched since there is nothing to exceute till they are actually invoked
+- for every function execution, a new context will be created, control would return to the parent context once fn returns something or goes to the end of its line
+- upon exit, the child context will be deleted
+- once all children context have been deleted, parent or global execution context gets deleted
+- all this is managed by the call stack, it gets populated with the global exceution context first and then later further child contexts are pushed and popped
+- call stack maintains the order of execution
+- call stack also known as control, program, exception stack
