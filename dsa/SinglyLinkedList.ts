@@ -56,8 +56,26 @@ export default class SinglyLinkedList<T> {
     this.length++;
   }
 
-  remove(item: T): T | undefined {
-    return;
+  remove(item: T): T | null | undefined {
+    if (!this.length) return;
+    //  todo: fixme!
+    // let i = 0,
+    //   current = this.head,
+    //   prev,
+    //   removedNode;
+    // if (current) {
+    //   while (i < this.length) {
+    //     if (current.value === item) {
+    //       removedNode = current;
+    //       if (prev?.next) {
+    //         prev.next = current.next;
+    //       }
+    //     }
+    //     current = current?.next as Node<T>;
+    //     i++;
+    //   }
+    // }
+    // return removedNode?.value;
   }
 
   get(idx: number): T | null | undefined {
