@@ -1,0 +1,3 @@
+- everything in JS happens inside execution context
+- execution context is like a big box containing memory component i.e, variaable environment (values and functions); 2nd component is code or thread of exceution (executes code line one at a time)
+- js is synchronous single threaded language; i.e, it can only exceute one command at a time
