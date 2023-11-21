@@ -1,0 +1,3 @@
+- access variables in functions even before initialising them
+- theres a difference between undefined and not defined, undefined is a reserved word and has been gone thru the memory creation phase
+- only actual functions are hoisted, not arrow functions or fns which are returned to some varibales
