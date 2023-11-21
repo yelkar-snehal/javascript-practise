@@ -97,7 +97,25 @@ efficeiency is mesaured in terms of complexities:
   - generally go down the stack first, then after hitting the base case, traverse up the stack
 
 - Quicksort
+
   - uses divide and conquer approach
   - very useful when procecssing power is less
   - divide and conquer strategy
-  -
+
+- Tress
+  - start from a point and grown to many, i.e, many connections unlike a linear list or stack or queue
+  - like multiple lists
+  - eventually all data structures lead to trees
+  - use recursion
+  - e.g: file system, DOM, compiler
+  - babel tree example ref(https://astexplorer.net/)
+  - root is the topmost node/point
+  - height is the length from the root to the grandest descendant, in general height of strands can vary
+  - binary tree, at max two children for each node
+  - binary search tree, strong ordering
+  - leaf, grandest descendant
+  - balanced tree: all strands w/ same height
+  - branching factor, possible number of child nodes parent node has
+  - traversal: pre-order, post-order, in-order
+  - strong vs weak ordering: levl vs node ordering
+  - time complexity: O(n) since traversing grows linearly w/ i/p
