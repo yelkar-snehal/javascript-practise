@@ -119,3 +119,5 @@ efficeiency is mesaured in terms of complexities:
   - traversal: dfs: depth first search pre-order, post-order, in-order
   - strong vs weak ordering: levl vs node ordering
   - time complexity: O(n) since traversing grows linearly w/ i/p
+  - breadth first serach traversal: traverse horizontally at each level, also mihgt be reffered to as tree order traversal
+  - time complexity not linear in bfs if arraylist (js []) is used as unshift/shift operations have O(n^2); on eachlevel traversal is doubled at max
