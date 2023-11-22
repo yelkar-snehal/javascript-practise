@@ -116,6 +116,6 @@ efficeiency is mesaured in terms of complexities:
   - leaf, grandest descendant
   - balanced tree: all strands w/ same height
   - branching factor, possible number of child nodes parent node has
-  - traversal: pre-order, post-order, in-order
+  - traversal: dfs: depth first search pre-order, post-order, in-order
   - strong vs weak ordering: levl vs node ordering
   - time complexity: O(n) since traversing grows linearly w/ i/p
