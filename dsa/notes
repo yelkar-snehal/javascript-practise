@@ -122,3 +122,13 @@ efficeiency is mesaured in terms of complexities:
   - breadth first serach traversal: traverse horizontally at each level, also mihgt be reffered to as tree order traversal
   - time complexity not linear in bfs if arraylist (js []) is used as unshift/shift operations have O(n^2); on eachlevel traversal is doubled at max
   - dfs preserves structure of the tree while dfs does not
+
+Heap
+
+- every child or grandchild is smaller(minHeap) or larger(maxHeap) than the current node
+- no need for traversal logic
+- used in priority queue
+- weakly ordered unlike a BST
+- the head node is either the smallest or the largest depending on the type of heap
+- filled in from left to right, no gaps
+- self balancing, can be used for thread scheduling
