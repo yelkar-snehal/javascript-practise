@@ -125,6 +125,7 @@ efficeiency is mesaured in terms of complexities:
 
 Heap
 
+- priority queue
 - every child or grandchild is smaller(minHeap) or larger(maxHeap) than the current node
 - no need for traversal logic
 - used in priority queue
@@ -132,3 +133,6 @@ Heap
 - the head node is either the smallest or the largest depending on the type of heap
 - filled in from left to right, no gaps
 - self balancing, can be used for thread scheduling
+- since dynamic array list has to be used, parent-child relationship can be established by: 2i + 1 for left child, 2i + 2 for the right one, i being the parent index; for child-parent relation: (i - 1) / 2, w/o the floating point
+- to update the heap element, a key-map of index-value should be maintained
+- self balancing
