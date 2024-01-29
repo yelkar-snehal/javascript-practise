@@ -2,3 +2,4 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 
 - this oeprator has a separate behavior for JS strict mode and non-strict mode
 - this substitution: if the value(reference) is undefined or null, JS will replace the value with the global object in non-strict mode
+- this value depends on how the function is called(runtime binding)

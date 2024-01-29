@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 //  global context
 // prints the reference to the global object; browser: window, node: runntime env
@@ -10,3 +10,8 @@ function foo() {
   console.log(this);
 }
 foo();
+
+// variation in function invocation
+foo();
+// this below refers to the caller object
+window.foo();
