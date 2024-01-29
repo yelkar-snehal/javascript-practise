@@ -6,7 +6,7 @@ console.log(this);
 
 // functionol context
 function foo() {
-  //  inisde the fn this reference changes w.r.t. the mode strict/non strict, undefined/global(i.e enclosing context)
+  //  inisde the fn this reference changes w.r.t. the mode strict/non strict, undefined/global
   console.log(this);
 }
 foo();
