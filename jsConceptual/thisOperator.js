@@ -31,3 +31,14 @@ const car2 = {
 
 // override this' reference
 car.printName.call(car2);
+
+// inside an arrow function
+const car3 = {
+  name: "Jeep",
+  printName: () => {
+    // car3's lexical context
+    console.log(this);
+  },
+};
+
+car3.printName();
