@@ -42,3 +42,17 @@ const car3 = {
 };
 
 car3.printName();
+
+// detailed enclosure eg
+const car4 = {
+  name: "Thar",
+  inner: function () {
+    const printName = () => {
+      // car3's lexical context
+      console.log(this);
+    };
+    printName();
+  },
+};
+
+car4.inner();
