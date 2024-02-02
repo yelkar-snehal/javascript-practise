@@ -48,7 +48,7 @@ const car4 = {
   name: "Thar",
   inner: function () {
     const printName = () => {
-      // car3's lexical context
+      // function's (inner) lexical context, will behave as if console is present directly inside the function, and not arrow function block
       console.log(this);
     };
     printName();
