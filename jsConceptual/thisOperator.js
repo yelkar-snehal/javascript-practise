@@ -56,3 +56,5 @@ const car4 = {
 };
 
 car4.inner();
+
+// this inside DOM referes to the HTML element
