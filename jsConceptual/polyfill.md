@@ -1,2 +1,4 @@
 - fallback methods for certain browsers
 - custom implementation
+- if added in Function.prototype every fn can access the polyfill
+- this context inside the bolyfill refers to the caller/invoker fn
