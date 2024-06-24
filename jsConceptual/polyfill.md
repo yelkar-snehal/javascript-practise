@@ -1,0 +1,2 @@
+- fallback methods for certain browsers
+- custom implementation
