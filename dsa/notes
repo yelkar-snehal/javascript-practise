@@ -95,6 +95,7 @@ efficeiency is mesaured in terms of complexities:
   - return address, return value and arguments to the function have to be considered
   - 3 steps: pre, recurse, and post
   - generally go down the stack first, then after hitting the base case, traverse up the stack
+  - useful in stack traces, called fn represented by its name and argument
 
 - Quicksort
 
