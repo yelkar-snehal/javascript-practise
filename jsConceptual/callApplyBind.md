@@ -1,0 +1,3 @@
+- 'casll' used for funtion borrowing
+- 'apply' same as 'call', only diff params passed as an array
+- 'bind' creates a fn ref, doesn't invoke
