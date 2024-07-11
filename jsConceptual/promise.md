@@ -6,4 +6,4 @@
 - promise object has statee(pending, fulfilled, rejected) and result
 - an object representing the eventual completion of an asynchronous function
 - chaining promises help to avoid the horizontal code growth which occurs in callnack hell
-- immutable promise object
+- immutable promise object and resolves only once
