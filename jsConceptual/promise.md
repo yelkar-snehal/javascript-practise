@@ -1,0 +1,7 @@
+- callback functions lead to inversion of control, i.e other function is responsible to call the function that is passed to it, it may or ma not be called, which makes it risky
+- to solve this promises weere introduced in JS
+- initially a function returning a promise returns an empty object of sort which is later fulfilled once the promise gets resolved
+- 'then' function can be invoked over the promise object to further deal with the data
+- instead of passing a callback attaching a promise function doesnt cause inversion of control
+- promise object has statee(pending, fulfilled, rejected) and result
+- an object representing the eventual completion of an asynchronous function
