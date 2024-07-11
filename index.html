@@ -85,4 +85,18 @@
 <!-- <script type="text/javascript" src="./iife.js"></script> -->
 <!-- <script type="text/javascript" src="./webworker.js"></script> -->
 
+<!-- SHADOW DOM -->
+<script>
+    class MyComponent extends HTMLElement {
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.innerHTML = `<style>p { color: red; }</style><p>Hello, Shadow DOM!</p>`;
+        }
+    }
+    customElements.define('my-component', MyComponent);
+</script>
+<my-component></my-component>
+
+
 </html>
