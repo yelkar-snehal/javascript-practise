@@ -7,3 +7,18 @@
 - an object representing the eventual completion of an asynchronous function
 - chaining promises help to avoid the horizontal code growth which occurs in callnack hell
 - immutable promise object and resolves only once
+- Key Differences b/w async-awit and then
+  -Syntax and Readability:
+  -promise.then uses callback functions and can lead to nested code (callback hell) if not managed well.
+  -async/await makes asynchronous code look synchronous, improving readability and maintainability.
+  -Error Handling:
+  - -promise.then requires .catch for handling errors.
+    -async/await uses try/catch blocks, making error handling more straightforward and similar to synchronous code.
+    -Execution Flow:
+  - -promise.then schedules callbacks and continues executing subsequent code immediately.
+    -await pauses the execution of the async function until the promise resolves, but other code outside the async function continues to run.
+    -Does async/await Stop the Execution of the Program?
+    -No, it does not stop the execution of the entire program.
+    -await only pauses the execution of the async function it is used in.
+    -Other code outside the async function continues to run normally.
+    -This allows other tasks and promises to continue executing in the event loop.
