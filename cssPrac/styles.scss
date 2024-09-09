@@ -1,0 +1,69 @@
+$primary-color: #ffffff;
+$secondary-color: #3498db;
+$font-stack: Helvetica, sans-serif;
+
+body {
+  font-family: $font-stack;
+  background-color: $primary-color;  
+}
+
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+.button {
+  @include border-radius(10px);
+  background-color: $secondary-color;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide {
+  animation: slideIn 1s ease-in-out;
+  background-color: $secondary-color;
+  color: white;
+  padding: 20px;
+  width: 200px;
+  margin: 50px;
+}
+
+.spinner {
+  @include border-radius(50%);
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid $secondary-color;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.card {
+  @include border-radius(5px);
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+
