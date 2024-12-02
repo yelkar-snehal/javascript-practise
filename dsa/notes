@@ -20,8 +20,9 @@ efficeiency is mesaured in terms of complexities:
 - arrays
 
   - contiguos memory space
+  - uint8array, uint16array are view sets of ArrayBuffer in JS, that is different range of bits can be used to index/walk the array, for eg arr[1] of 8 bits will still count as the other half of arr[0] of a 16 bit view set
   - getting something at an index: width of the type is multiplied by the offset, a[0], here offset is zero, assume width is 8 bits, O(1), size width and offset are constant/fixed, don't grow w/ the i/p
-  - insertion: go to a's mem address, width offset, and overwrite
+  - insertion: go to a's mem address, width offset, and overwrite (and not insert)
   - deletion: go to a's mem address, width offset, and set to nullish
   - technically insertt, push, pop aren't available in static or traditional arrays(which needs fixed need to be passed in), so [] isn't technically an array!
   - has .length prooperty
