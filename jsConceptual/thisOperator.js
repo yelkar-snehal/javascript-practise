@@ -58,3 +58,16 @@ const car4 = {
 car4.inner();
 
 // this inside DOM referes to the HTML element
+
+//arrow lexical ctx test
+const obj = {
+  a: 11,
+  foo: function () {
+    const bar = () => {
+      console.log(this.a);
+    };
+    return bar;
+  },
+};
+
+obj.foo()();

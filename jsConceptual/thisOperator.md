@@ -7,3 +7,4 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
   at Function.invokeGetter (<anonymous>:3:28)
 - this value depends on how the function is called(runtime binding)
 - arrow functions' this refers to the enclosing objects' lexical context
+- side note: function inside an object is called a method
