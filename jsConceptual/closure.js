@@ -28,3 +28,20 @@ function curriedAdd(a) {
 }
 
 console.log(curriedAdd(5)(3)(2)); // Output: 10 (5 + 3 + 2)
+
+// real life scenario
+function urlBuilder(baseUrl) {
+  return function (path) {
+    return function (queryParams) {
+      const queryString = Object.keys(queryParams)
+        .map((key) => `${key}=${queryParams[key]}`)
+        .join("&");
+      return `${baseUrl}/${path}?${queryString}`;
+    };
+  };
+}
+
+const apiBase = urlBuilder("https://api.example.com");
+const userEndpoint = apiBase("users");
+console.log(userEndpoint({ id: 123, active: true }));
+// Output: https://api.example.com/users?id=123&active=true
