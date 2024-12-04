@@ -15,3 +15,7 @@ Scope: Block-scoped.
 Hoisting: Similar to let, const is hoisted but has a temporal dead zone.
 Re-declaration: Cannot be re-declared or reassigned.
 Use: Preferred for variables that won’t be reassigned (though object/array properties can still be modified).
+
+tmz:
+temporal dead zone: time between variable hoisting and initialization, when accessed here variable throws refereence error
+that's why prefer to initialize variables at the top
