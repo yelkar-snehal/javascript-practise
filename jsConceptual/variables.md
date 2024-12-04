@@ -9,3 +9,9 @@ Scope: Block-scoped.
 Hoisting: Variables declared with let are hoisted but are not initialized, resulting in a "temporal dead zone" until the declaration.
 Re-declaration: Cannot be re-declared in the same scope.
 Use: Preferred for variables that will be reassigned.
+
+const:
+Scope: Block-scoped.
+Hoisting: Similar to let, const is hoisted but has a temporal dead zone.
+Re-declaration: Cannot be re-declared or reassigned.
+Use: Preferred for variables that won’t be reassigned (though object/array properties can still be modified).
