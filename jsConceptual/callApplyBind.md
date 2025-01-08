@@ -1,4 +1,4 @@
 - 'call' used for funtion borrowing
 - 'apply' same as 'call', only diff params passed as an array
 - 'bind' creates a fn ref, doesn't invoke
-- previously 'bound' funtion (bind) will respect those arguments only and calling the fn ref later with newwe 'call' or 'apply' arguments won't matter
+- previously 'bound' funtion (bind) will respect those arguments only and calling the fn ref later with new 'call' or 'apply' arguments won't matter
