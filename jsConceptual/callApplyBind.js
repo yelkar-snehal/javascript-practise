@@ -18,4 +18,4 @@ printName.call(name2, "Mumbai", "Maharashtra");
 printName.apply(name, ["Pune", "Maharashtra"]);
 
 const printName2 = printName.bind(name, "Pune", "Maharashtra");
-printName2.call(name2);
+printName2.call(name2, "Boston", "USA"); // extra args here won't be used, bound args above will
