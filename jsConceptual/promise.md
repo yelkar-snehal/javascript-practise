@@ -1,11 +1,11 @@
-- callback functions lead to inversion of control, i.e other function is responsible to call the function that is passed to it, it may or ma not be called, which makes it risky
-- to solve this promises weere introduced in JS
+- callback functions lead to inversion of control, i.e other function is responsible to call the function that is passed to it, it may or may not be called, which makes it risky
+- to solve this promises were introduced in JS
 - initially a function returning a promise returns an empty object of sort which is later fulfilled once the promise gets resolved
 - 'then' function can be invoked over the promise object to further deal with the data
 - instead of passing a callback attaching a promise function doesnt cause inversion of control
-- promise object has statee(pending, fulfilled, rejected) and result
+- promise object has states(pending, fulfilled, rejected) and result
 - an object representing the eventual completion of an asynchronous function
-- chaining promises help to avoid the horizontal code growth which occurs in callnack hell
+- chaining promises help to avoid the horizontal code growth which occurs in callback hell
 - immutable promise object and resolves only once
 - Key Differences b/w async-awit and then
   -Syntax and Readability:
@@ -16,9 +16,9 @@
     -async/await uses try/catch blocks, making error handling more straightforward and similar to synchronous code.
     -Execution Flow:
   - -promise.then schedules callbacks and continues executing subsequent code immediately.
-    -await pauses the execution of the async function until the promise resolves, but other code outside the async function continues to run.
-    -Does async/await Stop the Execution of the Program?
-    -No, it does not stop the execution of the entire program.
-    -await only pauses the execution of the async function it is used in.
-    -Other code outside the async function continues to run normally.
-    -This allows other tasks and promises to continue executing in the event loop.
+    - await pauses the execution of the async function until the promise r esolves, but other code outside the async function continues to run.
+    - Does async/await Stop the Execution of the Program?
+    - No, it does not stop the execution of the entire program.
+    - await only pauses the execution of the async function it is used in.
+    - Other code outside the async function continues to run normally.
+    - This allows other tasks and promises to continue executing in the event loop.
