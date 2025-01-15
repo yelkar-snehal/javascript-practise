@@ -20,5 +20,10 @@ tmz:
 temporal dead zone: time between variable hoisting and initialization, when accessed here variable throws refereence error
 that's why prefer to initialize variables at the top
 
-Note:
-If you assign a value to a variable that has not been declared i.e potato = true it will automatically become a GLOBAL variable.
+misc:
+
+- If you assign a value to a variable that has not been declared i.e potato = true it will automatically become a GLOBAL variable.
+- dynamicaaly typed
+- For most purposes ±(253-1) range is quite enough, but sometimes we need the entire range of really big integers, e.g. for cryptography or microsecond-precision timestamps. BigInt type was recently added to the language to represent integers of arbitrary length. A BigInt value is created by appending n to the end of an integer
+- The special null, undefined values do not belong to any of the types
+- The symbol type is used to create unique identifiers for objects. Symbols can be created using the Symbol() function, and their primary use case is to add hidden or special properties to objects that won’t interfere with other properties or methods. Since a symbol is a primitive value, if you attempt to create a symbol using the new operator, you will get an error. Symbolic properties do not participate in for..in loop. Object.keys(user) also ignores them. Object.assign copies both string and symbol properties
