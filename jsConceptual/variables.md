@@ -19,3 +19,6 @@ Use: Preferred for variables that won’t be reassigned (though object/array pro
 tmz:
 temporal dead zone: time between variable hoisting and initialization, when accessed here variable throws refereence error
 that's why prefer to initialize variables at the top
+
+Note:
+If you assign a value to a variable that has not been declared i.e potato = true it will automatically become a GLOBAL variable.
