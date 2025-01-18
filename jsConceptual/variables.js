@@ -39,3 +39,46 @@ let sym2 = Symbol.for("id");
 // get name by symbol
 alert(Symbol.keyFor(sym)); // name
 alert(Symbol.keyFor(sym2)); // id
+
+// object
+// Copies properties from a source object to a target object
+Object.assign(target, source);
+
+// Creates an object from an existing object
+Object.create(object);
+
+// Returns an array of the key/value pairs of an object
+Object.entries(object);
+
+// Creates an object from a list of keys/values
+Object.fromEntries();
+
+// Returns an array of the keys of an object
+Object.keys(object);
+
+// Returns an array of the property values of an object
+Object.values(object);
+
+// Groups object elements according to a function
+Object.groupBy(object, callback);
+
+// Prevents re-assignment
+const car = { type: "Fiat", model: "500", color: "white" };
+
+// Prevents adding object properties
+Object.preventExtensions(object);
+
+// Returns true if properties can be added to an object
+Object.isExtensible(object);
+
+// Prevents adding and deleting object properties
+Object.seal(object);
+
+// Returns true if object is sealed
+Object.isSealed(object);
+
+// Prevents any changes to an object
+Object.freeze(object);
+
+// Returns true if object is frozen
+Object.isFrozen(object);
