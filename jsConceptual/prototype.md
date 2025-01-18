@@ -1,0 +1,7 @@
+- object with hidden properties attached to your object by JS engine, this object is `__proto__`
+- same as global object `protoytpe`
+- that is `Array.prototype` is same as `arr.__proto__`
+- prtotype chaining array or function or any global object -> object prototype -> null
+- this justifies the fact that anything in JS is an object
+- inheritance in prototypes: check if field exits on the obj first -> then its proto -> then its proto's proto
+- `prototype` same as `__proto__`
