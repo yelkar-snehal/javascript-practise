@@ -8,3 +8,4 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 - this value depends on how the function is called(runtime binding)
 - arrow functions' this refers to the enclosing objects' lexical context
 - side note: function inside an object is called a method
+- In the constructor function, this has no value. The value of this will become the new object when a new object is created.
