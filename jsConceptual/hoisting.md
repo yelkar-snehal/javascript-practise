@@ -1,3 +1,4 @@
 - access variables in functions even before initialising them
 - theres a difference between undefined and not defined, undefined is a reserved word and has been gone thru the memory creation phase
-- only actual functions are hoisted, not arrow functions or fns which are returned to some varibales
+- only actual functions are hoisted, not arrow functions or fns which are returned to some variables
+- in JS, because of the execution context, in creation phase, variables with var are bought into memory with the placeholder undefined and functions with their whole definitions. This allows us to access them without any error without their actual execution or value allocation.
